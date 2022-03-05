@@ -1,19 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from './store';
+import store from './redux/store';
 
 ReactDOM.render(
-  <Provider store={ store }>
+  // <Provider store={ store }> 
     <BrowserRouter>
       <App />
-    </BrowserRouter>
-  </Provider>,
+    </BrowserRouter>,
+  // </Provider>,
   document.getElementById('root'),
 );
 
-reportWebVitals();
+// O projeto só roda se as linhas 9 e 13 estão comentadas. Está retornando a msg de erro:
+// react.development.js:1476 Uncaught Error: Invalid hook call.
