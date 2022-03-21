@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/Pictures.css';
 
-class Pictures extends Component {
-  render() {
-    return (
-      <div className='container-album'>
-        <h1>Álbum</h1>
-      </div>);
-  }
+export default function Pictures({history}) {
+  return (
+    <div className='container-album'>
+      <h1>Álbum</h1>
+      <button type="button" onClick={()=> history.push('/')}>Página inicial</button>
+    </div>
+  );
 }
-
-export default Pictures;

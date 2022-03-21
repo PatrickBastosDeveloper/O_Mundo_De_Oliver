@@ -1,14 +1,12 @@
-import React, { Component } from 'react';
+import React from 'react';
 import '../styles/Home.css';
 
-class Home extends Component {
-  render() {
-    return (
-      <div className='container-home'>
-        <p>Olá!</p>
-        <h1>Bem vindo ao Mundo De Oliver</h1>
-      </div>);
-  }
+export default function Home({history}) {
+  return (
+    <div className='container-home'>
+      <p>Olá!</p>
+      <h1>Bem vindo ao Mundo De Oliver</h1>
+      <button type="button" onClick={()=> history.push('/pictures')}>Minhas fotos</button>
+    </div>
+  );
 }
-
-export default Home;
